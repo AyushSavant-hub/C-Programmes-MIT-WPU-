@@ -1,0 +1,33 @@
+#include <stdio.h>
+int fact(int x){
+    if(x<=1) return 1;
+    return (x*fact(x-1));}
+int fib(int x){
+    if(x<=1) return 1;
+    return fib(x-1)+fib(x-2);}
+int main() {
+   int ch,n;
+   printf("-----------------------------------------MENU OF SERIES---------------------------------------");
+   printf("                          1.FACTORIAL\n");
+   printf("                          2.FIBONACCI\n");
+   printf("                          3.MULTIPLICATION\n");
+   printf("                          4.OR ANYHTING ELSE\n");
+   printf("enter your choice:");
+   scanf("%d",&ch);
+    printf("enter the number:");
+   scanf("%d",&n);
+   switch(ch){
+       case 1:
+       printf("factorial series of %d is %d\n",n,fact(n));
+       break;
+       case 2:
+       printf("fibonacci series of %d\n",n,fib(n));
+       for(int i=0;i<n;i++){
+           printf("%d\n",fib(i));}
+       break;
+    default:
+        printf("invalid choice\n");
+   }
+   
+    return 0;
+}
