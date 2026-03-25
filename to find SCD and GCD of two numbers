@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    int i,n1,n2,min,scd=1,gcd,temp;
+    printf("enter the number 1:");
+    scanf("%d",&n1);
+    printf("enter the number 2:");
+    scanf("%d",&n2);
+    min=(n1<n2)?n1:n2;
+    for (i=2;i<=min;i++){
+        if(n1%i==0 && n2%i==0){
+            scd=i;}
+            break;}
+        printf("smallest common divisor:%d\n",scd);
+    while(n2!=0){
+        temp=n1%n2;
+        n1=n2;
+        n2=temp;}
+    gcd=n1;
+    printf("greatest common divisor :%d\n",gcd);
+    return 0;
+}
