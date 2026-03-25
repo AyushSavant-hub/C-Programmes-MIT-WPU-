@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    long long bnum;
+    int i=0,dnum=0,digit;
+    printf("enter the binary number:");
+    scanf("%lld",&bnum);
+    while(bnum!=0){
+        digit=bnum%10;
+        dnum=dnum+digit*pow(2,i);
+        i++;
+        bnum=bnum/10;}
+    printf("the decimal number of %d is %d  ",scanf_input,dnum);
+    return 0;
+}
