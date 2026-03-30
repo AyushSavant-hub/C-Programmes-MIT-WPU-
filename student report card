@@ -1,0 +1,24 @@
+#include <stdio.h>
+int main() {
+    float m1,m2,m3,m4,m5,total,percentage;
+    printf("enter marks of the 5 subjects(out off 100 each):\n");
+    scanf("%f %f %f %f %f ",&m1,&m2,&m3,&m4,&m5);
+    total=m1+m2+m3+m4+m5;
+    percentage=total/5;
+    if(percentage>=75){
+        printf("Result : DISTINCTION \n");
+    }
+    else if(percentage>=60){
+        printf("Result : FIRST DIVISION\n");
+    }
+    else if(percentage>=50){
+        printf("Result : SECOND DIVISION\n");
+    }
+    else if(percentage>=35){
+        printf("Result : THIRD DIVISION\n");
+    }
+    else{
+        printf("Result : SUCCESSFULLY FAILIED\n");
+    }
+    return 0;
+}
