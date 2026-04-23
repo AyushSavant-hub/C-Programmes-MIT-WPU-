@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int i,n;
+    float x, rad, term, sum;
+    printf("Enter the value of x (in degrees): ");
+    scanf("%f", &x);
+    printf("Enter the number of terms: ");
+    scanf("%d", &n);
+    rad =x*(M_PI / 180.0);
+    term = rad;
+    sum = rad;
+    for (i = 1; i < n; i++) {
+        // Formula for the next term based on the previous one
+        // term = (-1*previous_term* x^2) / (factorial factors)
+        term = term *(-1)*rad rad /((2 * i)*(2 * i + 1));
+        sum = sum + term;
+    }
+    printf("Sum of the sine series: %f\n",sum);
+    printf("Standard sin(%f) value: %f\n", x,sin(rad));
+    return 0;
+}
+
